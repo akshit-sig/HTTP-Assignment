@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "15476f26-8887-4410-bdf4-15448a16e5e2",
+		"name": "API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39806889"
+	},
+	"item": [
+		{
+			"name": "Google Sheets API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://script.google.com/macros/library/d/1B82_dsYEeDgVWqTvCRvXOEaPYRZQPL7AmvlZc5nyRWRMxMtra1zm2_7i/1",
+					"protocol": "https",
+					"host": [
+						"script",
+						"google",
+						"com"
+					],
+					"path": [
+						"macros",
+						"library",
+						"d",
+						"1B82_dsYEeDgVWqTvCRvXOEaPYRZQPL7AmvlZc5nyRWRMxMtra1zm2_7i",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-ERROR-500",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET-ERROR-404",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "POST-Resource",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PUT as file in body",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-file-type",
+						"value": "text",
+						"type": "text"
+					},
+					{
+						"key": "x-file-password",
+						"value": "passworrd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/Users/akshitthakur/Downloads/TAS277_Akshit_Thakur_BankDB_set1.txt"
+					}
+				},
+				"url": {
+					"raw": "https://mock-api-cdd7.onrender.com/api/files/upload",
+					"protocol": "https",
+					"host": [
+						"mock-api-cdd7",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"files",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CROSS_Origin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication-get-token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "fakehashedsecret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://mock-api-cdd7.onrender.com/token",
+					"protocol": "https",
+					"host": [
+						"mock-api-cdd7",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test-Token",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "bearer_token",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "google_sheet_id",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "google_calendar_event_id",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
